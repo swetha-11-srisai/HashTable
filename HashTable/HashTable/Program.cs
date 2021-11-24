@@ -24,6 +24,8 @@ namespace HashTable
             tree.Insert(11);
             tree.Insert(3);
             tree.Insert(16);
+            bool result = tree.IfExists(63, tree);
+            Console.WriteLine(result);
             tree.DisplayTree();
             
         }

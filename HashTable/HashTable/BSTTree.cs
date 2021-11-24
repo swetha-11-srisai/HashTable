@@ -54,7 +54,8 @@ namespace HashTable
                     InsertRec(root.Right, newNode);
             }
         }
-        private void DisplayTree(Node root)
+        
+        public void DisplayTree(Node root)
         {
             if (root == null) return;
 

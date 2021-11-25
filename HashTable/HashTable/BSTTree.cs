@@ -54,7 +54,34 @@ namespace HashTable
                     InsertRec(root.Right, newNode);
             }
         }
-        
+        public bool IfExists(T element, BSTTree<T> node)
+        {
+            if (node == null)
+            {
+                return false;
+            }
+            if (node.data.Equals(element))
+            {
+                Console.WriteLine("Found the Element in Binary Search Tree" + " " + node.data);
+                return true;
+                
+            }
+            else
+            {
+                Console.WriteLine("Current Element is {0} in Binary Search Tree", node.data);
+            }
+            if (element.CompareTo(node.data) < 0)
+            {
+
+                IfExists(element, node.Left);
+            }
+            if (element.CompareTo(node.data) > 0)
+            {
+                IfExists(element,node.Right);
+            }
+            return true;
+        }
+
         public void DisplayTree(Node root)
         {
             if (root == null) return;

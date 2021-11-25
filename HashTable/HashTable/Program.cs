@@ -6,16 +6,17 @@ namespace HashTable
     {
         static void Main(string[] args)
         {
-            Hash<int , string> hash = new Hash<int,string>(3);
-
-            hash.Add(0, "Hii");
-            hash.Add(1, "Hi");
-            hash.Add(2, "Hello");
-            string hash3= hash.Get(2);
-            Console.WriteLine(hash3);
-            hash.Remove(0);
-            string hash2 = hash.Get(1);
-            Console.WriteLine(hash2);
+           
+                BSTTree<int> tree = new BSTTree<int>();
+                Node root = new Node(56);
+            Node rootone = new Node(30);
+            Node roottwo = new Node(70);
+            tree.Insert(56);
+            tree.Insert(30);
+            tree.Insert(70);
+            tree.DisplayTree();
+            
         }
     }
+    
 }
